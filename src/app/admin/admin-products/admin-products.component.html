@@ -1,0 +1,20 @@
+<p>
+    <a routerLink="/admin/products/new" class="btn btn-primary">Fill in your details</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let p of product$ | async">
+            <td>{{p.Name}}</td>
+            <td>
+                <button class="btn btn-primary">Edit</button>
+            </td>
+        </tr>
+    </tbody>
+</table>

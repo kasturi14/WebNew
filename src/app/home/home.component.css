@@ -1,0 +1,163 @@
+*{
+    margin: 0 !important;
+    padding: 0 ;
+}
+.carousel-1 .item {
+    width: 100% !important; /*slider width*/
+    max-height: 600px; /*slider height*/
+}
+.carousel-1 .item img {
+    width: 100% !important; /*img width*/
+}
+
+.carousel-caption {
+    padding-bottom: 250px;
+    font-family: Coiny;
+}
+.carousel-caption h2 {
+    font-size: 50px;
+    text-transform: uppercase;
+}
+
+.lls {
+    list-style: none;
+    position: relative;
+    text-align: center;
+    margin: 0;
+    padding: 50px;
+    font-size: 30px;
+    background: #060606;
+    opacity: 0.9;
+    color: white;
+    z-index: -1;
+    background: url('src/app/home/1.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+}
+#text {
+    font-size: 20px;
+}
+
+/*image grid */
+.contain {
+    position: relative;
+    background: url('src/app/home/photo.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover; 
+    background-attachment: fixed;
+    margin:0px;
+}
+.imgs .row {
+    padding: 30px;
+    padding-left: 0px;
+}
+.item {
+    position: relative;
+    width: 100%;
+}
+.image {
+    opacity: 1;
+    width: 100%;
+    height: 100%;
+    transition: .2s ease;
+    backface-visibility: hidden;
+}
+.desc {
+    transition: .2s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    text-align: center;
+}
+.desc p {
+    font-weight: 1000;
+}
+.item:hover .image {
+    opacity: 0.5;
+}
+.item:hover .desc {
+    opacity: 1;
+}
+
+
+/*flip*/
+/* The flip box container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+.flip-box {
+    width: 400px;
+    height: 300px;
+    perspective: 1000px; /* Remove this if you don't want the 3D effect */
+  }
+  
+  /* This container is needed to position the front and back side */
+  .flip-box-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+  
+  /* Do an horizontal flip when you move the mouse over the flip box container */
+  .flip-box:hover .flip-box-inner {
+    transform: rotateY(180deg);
+  }
+  
+  /* Position the front and back side */
+  .flip-box-front, .flip-box-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+  }
+  
+  /* Style the front side (fallback if image is missing) */
+  .flip-box-front {
+    background-color: #bbb;
+    color: black;
+  }
+  
+  /* Style the back side */
+  .flip-box-back {
+    background-color: black;
+    color: white;
+    padding: 100px;
+    font-size: 20px;
+    transform: rotateY(180deg);
+  }
+
+/*footer*/
+.black-foot {
+    background: #060606;
+    color: white;
+    margin: 0;
+    margin-bottom: 3em;
+    padding: 2em;
+
+}
+.black-foot li {
+    list-style: none;
+    display: inline;
+    padding: 20px;
+}
+.black-foot ul {
+    margin: 50px;
+    margin-inline-end: 20px;
+    font-size: 25px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+ul.big.link{
+    padding-left: 300px;
+    padding-right: 450px;
+}
+/*full width container*/
+@media (max-width: 767px) {
+    .block {
+        margin-left: -20px;
+        margin-right: -20px;
+    }
+}

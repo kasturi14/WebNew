@@ -1,0 +1,79 @@
+<div class="row">
+  <div class="col-md-6">
+      <form #f="ngForm" (ngSubmit)="save(f.value)">
+          <div class="form-group">
+            <label for="Name">Event's Name</label>
+            <input #Name="ngModel" ngModel name="Name" id="Name" type="text" class="form-control" required>
+            <div class="alert alert-danger" *ngIf="Name.touched && Name.invalid">
+              Name is Required
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="Date">From-</label>
+            <div class="input-group">
+            <input class="form-control" placeholder="yyyy-mm-dd"
+              name="dp" [(ngModel)]="model" ngbDatepicker #d="ngbDatepicker" (navigate)="date = $event.next">
+              <div class="input-group-append">
+                <button class="btn btn-outline-secondary calendar" (click)="d.toggle()" type="button"></button>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="EDate">To-</label>
+            <div class="input-group">
+            <input class="form-control" placeholder="yyyy-mm-dd"
+              name="dpe" [(ngModel)]="model1" ngbDatepicker #e="ngbDatepicker">
+              <div class="input-group-append">
+                <button class="btn btn-outline-secondary calendar" (click)="e.toggle()" type="button"></button>
+              </div>
+            </div>
+          </div>
+          
+        
+          <div class="form-group">
+            <label for="category">Category</label>
+            <select ngModel name="category" id="category" class="form-control">
+              <option value=""></option>
+              <option *ngFor="let c of categories$ | async" [value]="c.key">
+                {{c.payload.val().name}}
+              </option>
+            </select>
+          </div>
+
+
+          <div class="form-group">
+            <label for="about">About</label>
+            <textarea class="form-control" id="about" name="about" ngModel #about="ngModel" rows="3"></textarea>
+          </div>
+        
+        
+          <div class="form-group">
+              <label for="imageUrl">Image Url</label>
+              <input #imageUrl="ngModel" ngModel name="imageUrl" id="imageUrl" type="text" class="form-control" required url>
+              <div class="alert alert-danger" *ngIf="imageUrl.touched && imageUrl.invalid">
+                <div *ngIf="imageUrl.errors.required">*Required*</div>
+                <div *ngIf="imageUrl.errors.url">Image url should be valid</div>
+              </div>
+          </div>
+        
+        
+          <button class="btn btn-primary">Save</button>
+          </form>
+  </div>
+
+  <div class="col-md-6">
+      <img class="card-img-top" [src]="imageUrl.value">
+      <div class="card-body">
+        <h5 class="card-title">{{Name.value}}</h5>
+        <h6 class="card-subtitle mb-2 text-muted"></h6>
+        <p class="card-text">{{about.value}}</p>
+        <a href="#" class="btn btn-primary">Save me</a>
+      </div>
+  </div>
+
+</div>
+
+
+  

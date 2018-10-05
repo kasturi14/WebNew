@@ -1,7 +1,7 @@
 <div class="row">
   <div class="col-3">
     <div class="list-group">
-      <a *ngFor="let c of categories$ | async" routerLink="/" [queryParams]="{category: c.key}"  class="list-group-item"
+      <a *ngFor="let c of categories$ | async" routerLink="/products" [queryParams]="{category: c.key}"  class="list-group-item"
       [class.active]="category === c.key">
         {{c.payload.val().name}}
       </a>
@@ -15,8 +15,9 @@
             <img class="card-img-top" src={{p.imageUrl}} alt="Card image cap">
             <div class="card-body">
               <h5 class="card-title">{{p.Name}}</h5>
-              <p class="card-text">{{p.about}}</p>
-              <a href="#" class="btn btn-primary">Register</a>
+              <p class="card-text">{{p.dp.day}}.{{p.dp.month}}.{{p.dp.year}}</p>
+              <a routerLink="/register" class="btn btn-primary" (click)="setval(p.Name)">Register</a>
+              
             </div>
           </div>
         </div>

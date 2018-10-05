@@ -1,13 +1,13 @@
 *{
-    margin: 0 !important;
+    margin: 0 ;
     padding: 0 ;
 }
 .carousel-1 .item {
-    width: 100% !important; /*slider width*/
+    width: 100%; /*slider width*/
     max-height: 600px; /*slider height*/
 }
 .carousel-1 .item img {
-    width: 100% !important; /*img width*/
+    width: 100%; /*img width*/
 }
 
 .carousel-caption {

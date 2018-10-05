@@ -8,7 +8,7 @@ import * as firebase from 'firebase';
   providedIn: 'root'
 })
 export class UserService {
-
+  public key:string;
   constructor(private db: AngularFireDatabase) { }
 
    
@@ -18,6 +18,9 @@ export class UserService {
        name: user.displayName,
        email: user.email
      });
+     this.key=user.uid;
+     console.log(user.uid);
+
 
     }
     get(uid: string): AngularFireObject<AppUser>

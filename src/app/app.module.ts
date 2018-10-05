@@ -9,15 +9,10 @@ import { BsNavbarComponent } from './bs-navbar/bs-navbar.component';
 import { HomeComponent } from './home/home.component';
 import { ProductsComponent } from './products/products.component';
 import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
-import { CheckOutComponent } from './check-out/check-out.component';
-import { OrderSuccessComponent } from './order-success/order-success.component';
-import { MyOrdersComponent } from './my-orders/my-orders.component';
 import { AdminProductsComponent } from './admin/admin-products/admin-products.component';
-import { AdminOrdersComponent } from './admin/admin-orders/admin-orders.component';
 import {RouterModule} from '@angular/router';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import {FormsModule} from '@angular/forms';
-import { LoginComponent } from './login/login.component';
 import { LogoutComponent } from './logout/logout.component';
 import { AuthService } from './auth.service';
 import { AuthGuardService } from './auth-guard.service';
@@ -27,9 +22,10 @@ import { UserFormComponent } from './admin/user-form/user-form.component';
 import {CategoriesService} from './categories.service';
 import { UsersaveService } from './usersave.service';
 import { CustomFormsModule} from 'ng2-validation';
-import { WorkshopsComponent } from './workshops/workshops.component';
-import { CulturalComponent } from './cultural/cultural.component';
-import { SportsComponent } from './sports/sports.component';
+import { RegisterComponent } from './register/register.component';
+import { RegistersaveService } from './registersave.service';
+import { AdminLoginComponent } from './admin-login/admin-login.component';
+import {EventService} from './event.service';
 
 
 
@@ -40,17 +36,12 @@ import { SportsComponent } from './sports/sports.component';
     HomeComponent,
     ProductsComponent,
     ShoppingCartComponent,
-    CheckOutComponent,
-    OrderSuccessComponent,
-    MyOrdersComponent,
     AdminProductsComponent,
-    AdminOrdersComponent,
-    LoginComponent,
     LogoutComponent,
     UserFormComponent,
-    WorkshopsComponent,
-    CulturalComponent,
-    SportsComponent,
+    RegisterComponent,
+    AdminLoginComponent,
+  
     
   ],
   imports: [
@@ -62,26 +53,20 @@ import { SportsComponent } from './sports/sports.component';
     AngularFireDatabaseModule,
     NgbModule.forRoot(),
     RouterModule.forRoot([
-      {path:'' ,component: ProductsComponent},
+      {path:'' ,component:HomeComponent},
       {path:'products', component: ProductsComponent},
+      {path:'register', component:RegisterComponent},
       {path: 'shopping-cart', component:ShoppingCartComponent},
-      {path:'check-out', component: CheckOutComponent, canActivate: [AuthGuardService] },
-      {path:'order-success', component: OrderSuccessComponent},
-      {path:'login' , component:LoginComponent},
-      {path:'my/orders' , component:MyOrdersComponent, canActivate: [AuthGuardService]},
-      {path:'sports',component:SportsComponent},
-      {path:'workshops',component:WorkshopsComponent},
-      {path:'cultural',component:CulturalComponent},
       {path:'admin/products/new', component:UserFormComponent, canActivate: [AuthGuardService , AdminGuardService]},
       {path:'admin/products/:Name', component:UserFormComponent, canActivate: [AuthGuardService , AdminGuardService]},
       {path:'admin/products', component:AdminProductsComponent, canActivate: [AuthGuardService , AdminGuardService]},
-      {path:'admin/orders' , component:AdminOrdersComponent, canActivate: [AuthGuardService , AdminGuardService]},
+      {path:'admin/login' , component:AdminLoginComponent},
       {path:'logout' , component:LogoutComponent}
       
 
     ])
   ],
-  providers: [AuthService, AuthGuardService , UserService, AdminGuardService, CategoriesService,UsersaveService],
+  providers: [AuthService, AuthGuardService , UserService, AdminGuardService, CategoriesService,UsersaveService,RegistersaveService,EventService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

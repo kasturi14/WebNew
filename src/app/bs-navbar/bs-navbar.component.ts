@@ -14,9 +14,14 @@ export class BsNavbarComponent{
     auth.appUser$.subscribe(appUser => this.appUser = appUser);
   }
 
- logout()
+logout()
  {
    this.auth.logout();
  }
+
+  login()
+  {
+    this.auth.login();
+  }
 
 }

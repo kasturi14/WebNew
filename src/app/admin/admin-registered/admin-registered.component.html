@@ -9,6 +9,7 @@
                 <th>Skills</th>
                 <th>Stream</th>
                 <th>Year</th>
+                <th>Image</th>
             </tr>
         </thead>
         <tbody>
@@ -20,11 +21,9 @@
                 <td>{{p.about}}</td>
                 <td>{{p.Stream}}</td>
                 <td>{{p.Year}}</td>
+                <td><img class="card-img-top" src={{p.imageURL}} height='100' width='100' alt="Card image cap"></td>
                                 
             </tr>
         </tbody>
     </table>
-        <p align='center'>
-            <a routerLink="/admin/products/new" class="btn btn-dark">Add new Event</a>
-        </p>
     </div>

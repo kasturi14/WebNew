@@ -1,20 +1,21 @@
-<p>
-    <a routerLink="/admin/products/new" class="btn btn-primary">Fill in your details</a>
-</p>
-<table class="table">
+<div class="main-content">
+<table class='table'>
     <thead>
         <tr>
-            <th>Name</th>
-            <th>Email</th>
-            <th></th>
+            <th>Event</th>
+            <th>Action</th>
         </tr>
     </thead>
     <tbody>
         <tr *ngFor="let p of product$ | async">
             <td>{{p.Name}}</td>
             <td>
-                <button class="btn btn-primary">Edit</button>
+                <button class="btn btn-light">Edit</button>
             </td>
         </tr>
     </tbody>
 </table>
+    <p align='center'>
+        <a routerLink="/admin/products/new" class="btn btn-dark">Add new Event</a>
+    </p>
+</div>

@@ -26,6 +26,7 @@ import { RegisterComponent } from './register/register.component';
 import { RegistersaveService } from './registersave.service';
 import { AdminLoginComponent } from './admin-login/admin-login.component';
 import {EventService} from './event.service';
+import { AboutComponent } from './about/about.component';
 
 
 
@@ -41,6 +42,7 @@ import {EventService} from './event.service';
     UserFormComponent,
     RegisterComponent,
     AdminLoginComponent,
+    AboutComponent,
   
     
   ],
@@ -61,7 +63,8 @@ import {EventService} from './event.service';
       {path:'admin/products/:Name', component:UserFormComponent, canActivate: [AuthGuardService , AdminGuardService]},
       {path:'admin/products', component:AdminProductsComponent, canActivate: [AuthGuardService , AdminGuardService]},
       {path:'admin/login' , component:AdminLoginComponent},
-      {path:'logout' , component:LogoutComponent}
+      {path:'logout' , component:LogoutComponent},
+      {path:'about' , component:AboutComponent}
       
 
     ])

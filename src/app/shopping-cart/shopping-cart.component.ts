@@ -8,6 +8,8 @@ import { RegistersaveService } from '../registersave.service';
 })
 export class ShoppingCartComponent{
   registrations$;
+
+  public isCollapsed = true;
   constructor(private register:RegistersaveService) { 
 
     this.registrations$=register.getAll();

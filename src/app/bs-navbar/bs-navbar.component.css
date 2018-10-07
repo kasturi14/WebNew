@@ -4,11 +4,11 @@
 .navbar{
     margin: 0;
     padding: 0;
-    /* height: 100px; */
-/* }
-.n{
-    font-size: 20px;
-    padding: 20px;
-cursor:pointer;
-} */
+    height: 70px;
 }
+.n{
+    font-size: 17px;
+    padding: 15px;
+    padding-left: 20px;
+cursor:pointer;
+} 

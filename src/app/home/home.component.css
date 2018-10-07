@@ -12,7 +12,6 @@
 
 .carousel-caption {
     padding-bottom: 250px;
-    font-family: Coiny;
 }
 .carousel-caption h2 {
     font-size: 50px;
@@ -30,7 +29,7 @@
     opacity: 0.9;
     color: white;
     z-index: -1;
-    background: url('src/app/home/1.jpg');
+    background: url('https://us.123rf.com/450wm/crazyass/crazyass1602/crazyass160200025/54248995-blur-abstract-bokeh-of-street-city-night-light-background-abstract-traffic-background-black-and-whit.jpg?ver=6');
     background-attachment: fixed;
     background-size: cover;
 }
@@ -49,7 +48,7 @@
 }
 .imgs .row {
     padding: 30px;
-    padding-left: 0px;
+    padding-left: 40px;
 }
 .item {
     position: relative;
@@ -128,36 +127,49 @@
     font-size: 20px;
     transform: rotateY(180deg);
   }
+  .btn{
+      padding: 10px 20px;
+  }
 
 /*footer*/
 .black-foot {
     background: #060606;
     color: white;
     margin: 0;
-    margin-bottom: 3em;
-    padding: 2em;
-
+    padding:2em;
 }
-.black-foot li {
-    list-style: none;
-    display: inline;
-    padding: 20px;
+div.row{
+    width: 100%;
+    padding-top: 50px;
 }
-.black-foot ul {
-    margin: 50px;
-    margin-inline-end: 20px;
+.black-foot ul{
+    display: flex;
+    justify-content: space-around;
+}
+.black-foot .big {
     font-size: 25px;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.black-foot .big,
+.black-foot .small{
+    width: 45%;
+	display: flex;
+    justify-content: space-around;
+    margin-left: 20px;
+    margin-right: 20px;
 }
 
-ul.big.link{
-    padding-left: 300px;
-    padding-right: 450px;
+.black-foot ul li {
+    list-style: none;
+    font-size: 20px;
+	width: 100px;
+	height: 100px;
+	text-align: center;
+	line-height: 30px;
+	margin: 0 50px;
+	border-radius: 50%;
+	color: #000635;
+	transition: 0.5s;
 }
-/*full width container*/
-@media (max-width: 767px) {
-    .block {
-        margin-left: -20px;
-        margin-right: -20px;
-    }
+ul.small.first{
+    text-decoration: none;
 }

@@ -1,21 +1,36 @@
- <div class="row">
-  <ng-container *ngFor="let p of registrations$  | async; let i=index">
-    <div class="col">
-      <div class="card" style="width: 20rem;">
-        <img class="card-img-top" src={{p.imageURL}} alt="Card image cap">
-        <div class="card-body">
-          <h5 class="card-title">{{p.Name}}</h5>
-          <p class="card-text">{{p.about}}</p>
-          
-          
-                  
 
-    
 
+<div class="main-content" height='100%' width='100%'>
+  <h1>All Registrations</h1>
+  <div class="row">
+    <ng-container *ngFor="let p of registrations$  | async; let i=index">
+      <div class="col-sm">
+        <div class="card" style="width: 20rem;">
+          <img class="card-img-top" src={{p.imageURL}} height='240' width='320' alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">{{p.Name}}</h5>
+            <p class="card-text">{{p.about}}</p>
+            <p>
+            <button type="button" class="btn btn-outline-dark" (click)="isCollapsed = !isCollapsed"
+                    [attr.aria-expanded]="!isCollapsed" aria-controls="collapseExample">
+              More
+            </button>
+            </p>
+            <div id="collapseExample" [ngbCollapse]="isCollapsed">
+              <div class="card">
+                <div class="card-body">
+                    {{p.about}}                
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
+        <div *ngIf="(i+1) % 2 === 0" ></div>
       </div>
-    </div>
-    <div *ngIf="(i+1) % 2 === 0" class="w-100"></div>
-  </ng-container>
-</div> 
+    </ng-container>
+  </div>  
+</div>
 
+
+ 
+ 

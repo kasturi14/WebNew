@@ -1,31 +1,33 @@
 <div class="Body">
   
   <link href="https://fonts.googleapis.com/css?family=Coiny" rel="stylesheet">
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 
+  
   <div class="image-container">
-    <ngb-carousel class="carousel-1">
-        <ng-template ngbSlide class="item">
-          <img src="assets/Yourname.png" alt="Random first slide" width="100%">
-          <div class="carousel-caption">
-            <h2 class="animated slideInUp">Lorem ipsum</h2>
-            <h3 class="animated slideInUp">Lorem ipsum dolor sit amet</h3>
-          </div>
-        </ng-template>
-        <ng-template ngbSlide class="item">
-          <img src="assets/k4.jpg" alt="Random second slide" width="100%">
-          <div class="carousel-caption">
-            <h2 class="animated slideInUp">Lorem ipsum</h2>
-            <h3 class="animated slideInUp">Lorem ipsum dolor sit amet</h3>
-          </div>
-        </ng-template>
-        <ng-template ngbSlide class="item">
-          <img src="assets/Dog-wallpaper.jpg" alt="Random third slide" width="100%">
-          <div class="carousel-caption">
-            <h2 class="animated zoomIn">Lorem ipsum</h2>
-            <h3 class="animated jackInTheBox">Lorem ipsum dolor sit amet</h3>
-          </div>
-        </ng-template>
-      </ngb-carousel>
+    <ngb-carousel *ngIf="images">
+      <ng-template ngbSlide>
+        <img src="https://images.unsplash.com/photo-1532649538693-f3a2ec1bf8bd?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=67e698aabba0e095f5a9804736866fa2&auto=format&fit=crop&w=750&q=80" width='100%' height="600">
+        <div class="carousel-caption">
+          <h3>First slide label</h3>
+          <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+        </div>
+      </ng-template>
+      <ng-template ngbSlide>
+        <img src="https://images.unsplash.com/photo-1522158637959-30385a09e0da?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=7ed355dbd6d0efe1d3c158d01f89d833&auto=format&fit=crop&w=750&q=80" width='100%' height="600">
+        <div class="carousel-caption">
+          <h3>Second slide label</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+      </ng-template>
+      <ng-template ngbSlide>
+        <img src="https://images.unsplash.com/photo-1505373877841-8d25f7d46678?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=f1d076508395c99b386351d72a95c09e&auto=format&fit=crop&w=700&q=80" width='100%' height="600">
+        <div class="carousel-caption">
+          <h3>Third slide label</h3>
+          <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+        </div>
+      </ng-template>
+    </ngb-carousel>
   </div>
 
   <div class="lls">
@@ -53,11 +55,11 @@
           <div class="flip-box">
             <div class="flip-box-inner">
               <div class="flip-box-front">
-                <img src="assets/pexels-photo.jpg" style="width:400px;height:300px">
+                <img src="https://c1.staticflickr.com/2/1668/25293249072_1214789e34_b.jpg" style="width:400px;height:300px">
               </div>
               <div class="flip-box-back">
-                <h2>Project title</h2>
-                <button type="button" class="btn btn-info">Project details</button>
+                <h4>Events</h4><br>
+                <button type="button" class="btn btn-info" routerLink="/products">Know more</button>
               </div>
             </div>
           </div>
@@ -66,74 +68,29 @@
           <div class="flip-box">
             <div class="flip-box-inner">
               <div class="flip-box-front">
-                <img src="assets/soap-bubble.jpg" style="width:400px;height:300px">
+                <img src="https://www.army.mil/e2/c/images/2016/11/16/457276/size0.jpg" style="width:400px;height:300px">
               </div>
               <div class="flip-box-back">
-                <h2>Project title</h2>
-                <button type="button" class="btn btn-info">Project details</button>
+                <h4>Registrations</h4><br>
+                <button type="button" class="btn btn-info" routerLink="/shopping-cart">Know more</button>
               </div>
             </div>
           </div>
         </div>
-      <div class="item col-md-4">
-        <div class="flip-box">
-          <div class="flip-box-inner">
-            <div class="flip-box-front">
-              <img src="assets/image-a.jpg" style="width:400px;height:300px">
-            </div>
-            <div class="flip-box-back">
-              <h2>Project title</h2>
-              <button type="button" class="btn btn-info">Project details</button>
+        <div class="item col-md-4">
+          <div class="flip-box">
+            <div class="flip-box-inner">
+              <div class="flip-box-front">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSgz11SZjdHjJm1WAnHswa4S2z5pTz4mDQbXEFik17i9Qpi6WhJ" style="width:400px;height:300px">
+              </div>
+              <div class="flip-box-back">
+                <h4>About Us</h4><br>
+                <button type="button" class="btn btn-info" routerLink="/about">Know more</button>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-
-
-    <div class="row">
-        <div class="item col-md-4">
-          <div class="flip-box">
-            <div class="flip-box-inner">
-              <div class="flip-box-front">
-                <img src="assets/butterfly.jpg" style="width:400px;height:300px">
-              </div>
-              <div class="flip-box-back">
-                <h2>Project title</h2>
-                <button type="button" class="btn btn-info">Project details</button>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="item col-md-4">
-          <div class="flip-box">
-            <div class="flip-box-inner">
-              <div class="flip-box-front">
-                <img src="assets/sapling.jpg" style="width:400px;height:300px">
-              </div>
-              <div class="flip-box-back">
-                <h2>Project title</h2>
-                <button type="button" class="btn btn-info">Project details</button>
-              </div>
-            </div>
-          </div>
-        </div> 
-      <div class="item col-md-4">
-        <div class="flip-box">
-          <div class="flip-box-inner">
-            <div class="flip-box-front">
-              <img src="assets/wallpaper.jpg" style="width:400px;height:300px">
-            </div>
-            <div class="flip-box-back">
-              <h2>Project title</h2>
-              <button type="button" class="btn btn-info">Project details</button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-
     </div>
   </div>
 
@@ -144,23 +101,33 @@
         <ul class="big social">SOCIAL</ul>
       </div>
       <div class="row">
-        <ul>
-          <li>HOME</li>
-          <li>ABOUT</li>
-          <li>LATEST</li>
-          <li>WORK</li>
-          <li>CONTACT</li>
-        </ul>
-        <ul>
-          <li><img src="" alt="Twitter"></li>
-          <li><img src="" alt="Facebook"></li>
-          <li><img src="" alt="Instagram"></li>
+        <ul class="small first">
+            <li><a routerLink="/">Home</a></li>
+            <li><a routerLink="/about">About</a></li>
+            <li><a routerLink="/products">Events</a></li>
+            <li><a routerLink="/about">JoinUs</a></li>
+  
+        </ul>       
+        <ul class="small second">
+            <li>
+              <a routerLink="/"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+            </li>
+            <li>
+              <a routerLink="/"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+            </li>
+            <li>
+              <a routerLink="/"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+            </li>
+            <li>
+              <a routerLink="/"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+            </li>
+            <li>
+              <a routerLink="/"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+            </li>
         </ul>
       </div>
     </div>
   </div>
-
-
 
 </div>
 

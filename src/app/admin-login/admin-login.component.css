@@ -1,0 +1,35 @@
+h2{
+    text-align: center;
+    padding: 10px;
+}
+
+.contain{
+    position: absolute;
+    width: 100%;
+    background: url('https://us.123rf.com/450wm/crazyass/crazyass1602/crazyass160200025/54248995-blur-abstract-bokeh-of-street-city-night-light-background-abstract-traffic-background-black-and-whit.jpg?ver=6');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 556px;
+}
+.inner-contain {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background: #ddd;
+    padding: 50px;
+    border-radius: 20px;
+    width: 500px;
+}
+label {
+    font-size: 18px;
+}
+.btn {
+    margin: 20px;
+    margin-left: 150px;
+    width: 100px;
+}
+input:hover{
+    background-color: #bbb;
+}

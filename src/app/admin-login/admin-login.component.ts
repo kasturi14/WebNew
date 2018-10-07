@@ -15,7 +15,7 @@ export class AdminLoginComponent{
   {
     if(username == "xyz" && password=="123")
     {
-      firebase.database().ref('/users/'+this.user1.key+'/isAdmin').set("true");
+      firebase.database().ref('/users/'+this.user1.key+'/isAdmin').set(true);
     }
   }
 

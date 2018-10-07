@@ -16,12 +16,12 @@
             <div class="card-body">
               <h5 class="card-title">{{p.Name}}</h5>
               <p class="card-text">{{p.dp.day}}.{{p.dp.month}}.{{p.dp.year}}</p>
-              <a routerLink="/register" class="btn btn-primary" (click)="setval(p.Name)">Register</a>
+              <a routerLink="/register" class="btn btn-dark" (click)="setval(p.Name)">Register</a>
               
             </div>
           </div>
         </div>
-        <div *ngIf="(i+1) % 2 === 0" class="w-100"></div>
+        <div *ngIf="(i+1) % 2 === 0" ></div>
       </ng-container>
     </div>
   </div>

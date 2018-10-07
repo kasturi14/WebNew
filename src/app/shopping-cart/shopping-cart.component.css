@@ -1,0 +1,33 @@
+
+h1{
+    text-align: center;
+    padding: 20px;
+	text-shadow: 10px 10px 15px gray;	
+}
+
+
+div.main-content {
+    font-family: 'Space Mono', monospace;
+    padding: 30px;
+    background-color: #000;
+    color: #bbb;
+}
+div.col-sm {
+    margin: 20px;
+    /* display: flex;
+    justify-content: space-around; */
+}
+.card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #ccc;
+    background-clip: border-box;
+    border: 0px solid rgba(0, 0, 0, 0.125);
+    border-radius: 10px;
+    box-shadow: 10px 10px 25px #A6A5AC;
+    color: #000;
+    text-align: center;
+}

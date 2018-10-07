@@ -7,9 +7,6 @@ import {Observable} from 'rxjs/Rx';
 import { AngularFireDatabase } from 'angularfire2/database';
 import { EventService } from '../event.service';
 
-
-
-
 @Component({
   selector: 'app-products',
   templateUrl: './products.component.html',
@@ -23,7 +20,8 @@ export class ProductsComponent{
   category: string;
   public event: string;
 
-  constructor(route: ActivatedRoute, private usersave1: UsersaveService,private event1:EventService,private categoryService: CategoriesService,private db:AngularFireDatabase) {
+  constructor( route: ActivatedRoute, private usersave1: UsersaveService,private event1:EventService,private categoryService: CategoriesService,private db:AngularFireDatabase) 
+  {
     usersave1.getAll().subscribe(products => {this.products = products as Product[];
     
 

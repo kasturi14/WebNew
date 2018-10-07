@@ -44,7 +44,7 @@ import { AdminRegisteredComponent } from './admin/admin-registered/admin-registe
     RegisterComponent,
     AdminLoginComponent,
     AboutComponent,
-    AdminRegisteredComponent,
+    AdminRegisteredComponent
   
     
   ],
@@ -67,9 +67,11 @@ import { AdminRegisteredComponent } from './admin/admin-registered/admin-registe
       {path:'admin/login' , component:AdminLoginComponent},
       {path:'admin/registered_users' , component:AdminRegisteredComponent , canActivate:[AuthGuardService,AdminGuardService]},
       {path:'logout' , component:LogoutComponent},
-      {path:'about' , component:AboutComponent}
+      {path:'about' , component:AboutComponent},
       
 
+      
+      
     ])
   ],
   providers: [AuthService, AuthGuardService , UserService, AdminGuardService, CategoriesService,UsersaveService,RegistersaveService,EventService],

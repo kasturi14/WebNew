@@ -9,7 +9,8 @@
           <img class="card-img-top" src={{p.imageURL}} height='240' width='320' alt="Card image cap">
           <div class="card-body">
             <h5 class="card-title">{{p.Name}}</h5>
-            <p class="card-text">{{p.about}}</p>
+            <p class="card-text"><p>Yooo, I'm from {{p.Stream}},{{p.Year}}</p>
+            <p class="card-text"><p>Event Registered for: {{p.event}}</p>
             <p>
             <button type="button" class="btn btn-outline-dark" (click)="isCollapsed = !isCollapsed"
                     [attr.aria-expanded]="!isCollapsed" aria-controls="collapseExample">
@@ -19,7 +20,7 @@
             <div id="collapseExample" [ngbCollapse]="isCollapsed">
               <div class="card">
                 <div class="card-body">
-                    {{p.about}}                
+                    <p>{{p.about}}</p>
                 </div>
               </div>
             </div>

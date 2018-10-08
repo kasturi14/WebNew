@@ -1,0 +1,30 @@
+<div class="main-content">
+    <table class='table'>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Event</th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th>Skills</th>
+                <th>Stream</th>
+                <th>Year</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let p of  registrations$ | async">
+                <td>{{p.Name}}</td>
+                <td>{{p.event}}</td>
+                <td>{{p.Email}}</td>
+                <td>{{p.Phone}}</td>
+                <td>{{p.about}}</td>
+                <td>{{p.Stream}}</td>
+                <td>{{p.Year}}</td>
+                                
+            </tr>
+        </tbody>
+    </table>
+        <p align='center'>
+            <a routerLink="/admin/products/new" class="btn btn-dark">Add new Event</a>
+        </p>
+    </div>

@@ -62,7 +62,7 @@ import { AdminRegisteredComponent } from './admin/admin-registered/admin-registe
       {path:'register', component:RegisterComponent},
       {path: 'shopping-cart', component:ShoppingCartComponent},
       {path:'admin/products/new', component:UserFormComponent, canActivate: [AuthGuardService , AdminGuardService]},
-      {path:'admin/products/:Name', component:UserFormComponent, canActivate: [AuthGuardService , AdminGuardService]},
+      {path:'admin/products/:id', component:UserFormComponent, canActivate: [AuthGuardService , AdminGuardService]},
       {path:'admin/products', component:AdminProductsComponent, canActivate: [AuthGuardService , AdminGuardService]},
       {path:'admin/login' , component:AdminLoginComponent},
       {path:'admin/registered_users' , component:AdminRegisteredComponent , canActivate:[AuthGuardService,AdminGuardService]},

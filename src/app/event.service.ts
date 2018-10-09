@@ -6,6 +6,7 @@ import { ProductsComponent } from './products/products.component';
 })
 export class EventService {
   finally:string;
+  edit:string;
 
   constructor() { }
 
@@ -16,5 +17,15 @@ export class EventService {
   show()
   {
   return this.finally;
+  }
+
+  setid(editId: string)
+  {
+    this.edit=editId;
+  }
+
+  showId()
+  {
+    return this.edit;
   }
 }

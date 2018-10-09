@@ -16,4 +16,17 @@ export class UsersaveService {
     return this.db.list('/usersave').valueChanges();
   }
 
+  get(productId:string)
+  {
+    return this.db.object('/usersave/'+productId).valueChanges();
+  }
+
+  update(eventId,event)
+  {
+    return this.db.object('/usersave/'+eventId).update(event);
+  }
+
+  delete(productId){
+    return this.db.object('/usersave/'+ productId).remove();
+  }
 }

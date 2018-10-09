@@ -4,7 +4,7 @@
   <form #f="ngForm" (ngSubmit)="save(f.value)">
       <div class="form-group">
         <label for="Name">Event's Name</label>
-        <input #Name="ngModel" ngModel name="Name" id="Name" type="text" class="form-control" required>
+        <input #Name="ngModel" [(ngModel)]="product.Name" name="Name" id="Name" type="text" class="form-control" required>
         <div class="alert alert-danger" *ngIf="Name.touched && Name.invalid">
           Name is Required
         </div>
@@ -14,7 +14,7 @@
         <label for="Date">From-</label>
         <div class="input-group">
         <input class="form-control" placeholder="yyyy-mm-dd"
-          name="dp" [(ngModel)]="model" ngbDatepicker #d="ngbDatepicker" (navigate)="date = $event.next">
+          name="dp" [(ngModel)]="product.dp" ngbDatepicker #d="ngbDatepicker" (navigate)="date = $event.next">
           <div class="input-group-append">
             <button class="btn btn-light calendar" (click)="d.toggle()" type="button"></button>
           </div>
@@ -25,7 +25,7 @@
         <label for="EDate">To-</label>
         <div class="input-group">
         <input class="form-control" placeholder="yyyy-mm-dd"
-          name="dpe" [(ngModel)]="model1" ngbDatepicker #e="ngbDatepicker">
+          name="dpe" [(ngModel)]="product.dpe" ngbDatepicker #e="ngbDatepicker">
           <div class="input-group-append">
             <button class="btn btn-light calendar" (click)="e.toggle()" type="button"></button>
           </div>
@@ -35,7 +35,7 @@
     
       <div class="form-group">
         <label for="category">Category</label>
-        <select ngModel name="category" id="category" class="form-control">
+        <select [(ngModel)]="product.category" name="category" id="category" class="form-control">
           <option value="">Select</option>
           <option *ngFor="let c of categories$ | async" [value]="c.key">
             {{c.payload.val().name}}
@@ -46,13 +46,13 @@
 
       <div class="form-group">
         <label for="about">About</label>
-        <textarea class="form-control" id="about" name="about" ngModel #about="ngModel" rows="3"></textarea>
+        <textarea class="form-control" id="about" name="about" [(ngModel)]="product.about" #about="ngModel" rows="3"></textarea>
       </div>
     
     
       <div class="form-group">
           <label for="imageUrl">Image Url</label>
-          <input #imageUrl="ngModel" ngModel name="imageUrl" id="imageUrl" type="text" class="form-control" required url>
+          <input #imageUrl="ngModel" [(ngModel)]="product.imageUrl" name="imageUrl" id="imageUrl" type="text" class="form-control" required url>
           <div class="alert alert-danger" *ngIf="imageUrl.touched && imageUrl.invalid">
             <div *ngIf="imageUrl.errors.required">*Required*</div>
             <div *ngIf="imageUrl.errors.url">Image url should be valid</div>

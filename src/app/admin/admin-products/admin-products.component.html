@@ -3,14 +3,17 @@
     <thead>
         <tr>
             <th>Event</th>
+            <th>Date</th>
             <th>Action</th>
         </tr>
     </thead>
     <tbody>
-        <tr *ngFor="let p of product$ | async">
+        <tr *ngFor="let p of products$ | async">
             <td>{{p.Name}}</td>
+            <td>{{p.dp.day}}.{{p.dp.month}}.{{p.dp.year}}-{{p.dpe.day}}.{{p.dpe.month}}.{{p.dpe.year}}</td>
             <td>
-                <button class="btn btn-light">Edit</button>
+                <button class="btn btn-light" (click)="delete(p.key)">delete</button>
+                <button class="btn btn-light" [routerLink]="" (click)="edit(p.key)">Edit</button>
             </td>
         </tr>
     </tbody>

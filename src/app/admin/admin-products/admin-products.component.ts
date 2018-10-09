@@ -1,5 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { UsersaveService } from '../../usersave.service';
+import { AngularFireList, AngularFireDatabase } from 'angularfire2/database';
+import { Observable } from 'rxjs';
+import { take } from 'rxjs/operator/take';
+import { EventService } from '../../event.service';
+import { Router } from '@angular/router';
 
 
 
@@ -10,12 +15,33 @@ import { UsersaveService } from '../../usersave.service';
 })
 export class AdminProductsComponent implements OnInit {
 
-  product$;
-  
 
-  constructor(private usersave1: UsersaveService) { 
-    this.product$ = this.usersave1.getAll();
+  productRef: AngularFireList<any>;
+  products$: Observable<any[]>;
+
+  constructor(private route:Router,private usersave1: UsersaveService,private db:AngularFireDatabase,private edit1:EventService) {
+
+    this.productRef = db.list('/usersave');
+    this.products$ = this.productRef.snapshotChanges().map(changes => {
+        return changes.map(c => ({ key: c.payload.key, ...c.payload.val() 
+    }));
     
+    });
+
+  }
+
+  delete(key)
+  {
+    if (!confirm('Are you sure you want to delete this event?')) return;
+
+    this.usersave1.delete(key);
+    this.route.navigate(['/admin/products']);
+  }
+
+  edit(key)
+  {
+    this.edit1.setid(key);
+    this.route.navigate(['/admin/products/',key]);
   }
 ngOnInit()
 {}

@@ -14,10 +14,14 @@
 
     <div class="form-group">
       <label for="Stream">Stream</label>
-      <input #Stream="ngModel" ngModel name="Stream" id="Stream" type="text" class="form-control" required>
-      <div class="alert alert-danger" *ngIf="Stream.touched && Stream.invalid">
-        Stream is Required
-      </div>
+      <select class="form-control" #Stream="ngModel" ngModel name="Stream" id="Stream" required>
+        <option>CSE</option>
+        <option>IT</option>
+        <option>ME</option>
+        <option>ECE</option>
+        <option>CE</option>
+        <option>EE</option>
+      </select>
     </div>
 
     <div class="form-group">
@@ -31,7 +35,7 @@
 
     <div class="form-group">
       <label for="Phone">Phone Number</label>
-      <input #Phone="ngModel" ngModel name="Phone" id="Phone" type="number" class="form-control" required>
+      <input maxlength="10" #Phone="ngModel" ngModel name="Phone" id="Phone" type="number" class="form-control" required>
       <div class="alert alert-danger" *ngIf="Phone.touched && Phone.invalid">
         Phone Number is Required
       </div>
@@ -49,7 +53,7 @@
 
     <div class="form-group">
       <label for="about">About</label>
-      <textarea class="form-control" id="about" name="about" ngModel #about="ngModel" rows="3"></textarea>
+      <textarea maxlength="180" class="form-control" id="about" name="about" ngModel #about="ngModel" rows="3"></textarea>
     </div>
   
     <div class="form-group">

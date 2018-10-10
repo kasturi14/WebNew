@@ -11,18 +11,33 @@
     <div class="row">
       <ng-container *ngFor="let p of filteredProducts; let i=index">
         <div class="col">
-          <div class="card" style="width: 20rem;">
-            <img class="card-img-top" src={{p.imageUrl}} alt="Card image cap">
-            <div class="card-body">
-              <h5 class="card-title">{{p.Name}}</h5>
-              <p class="card-text">{{p.dp.day}}.{{p.dp.month}}.{{p.dp.year}}</p>
-              <a routerLink="/register" class="btn btn-dark" (click)="setval(p.Name)">Register</a>
-             
+
+
+          <div class="flip-box">
+            <div class="flip-box-inner">
+              <div class="flip-box-front">
+
+                <div class="card" style="width: 20rem;">
+                  <img class="card-img-top" src={{p.imageUrl}} height='240' width='320' alt="Card image cap">
+                  <div class="card-body">
+                    <h5 class="card-title">{{p.Name}}</h5>
+                    <p class="card-text">{{p.dp.day}}.{{p.dp.month}}.{{p.dp.year}}</p>                   
+                  </div>
+                </div>
+              </div>
+              <div class="about flip-box-back">
+                {{p.about}}<br>
+                <a routerLink="/register" class="btn btn-light" (click)="setval(p.Name)">Register</a>
+              </div>
             </div>
           </div>
+
+
         </div>
         <div *ngIf="(i+1) % 2 === 0" ></div>
       </ng-container>
     </div>
   </div>
 </div>
+
+

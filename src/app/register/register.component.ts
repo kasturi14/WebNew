@@ -4,7 +4,7 @@ import * as firebase from 'firebase';
 import { AngularFireDatabase } from 'angularfire2/database';
 import { UserService } from '../user.service';
 import { UsersaveService } from '../usersave.service';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { CategoriesService } from '../categories.service';
 import { EventService } from '../event.service';
 
@@ -19,7 +19,7 @@ export class RegisterComponent {
   public event:string;
   public ref;
   file:File;
-  constructor(private usersave:UsersaveService,private event1:EventService,private route:ActivatedRoute, private category: CategoriesService, private registersave:RegistersaveService,private db:AngularFireDatabase,private user1:UserService) { 
+  constructor(private usersave:UsersaveService,private router:Router,private event1:EventService,private route:ActivatedRoute, private category: CategoriesService, private registersave:RegistersaveService,private db:AngularFireDatabase,private user1:UserService) { 
       
   }
   
@@ -33,6 +33,7 @@ export class RegisterComponent {
     this.upload(this.result.key);
     this.event=this.event1.show();
     this.done(this.result.key,this.event);
+    this.router.navigate(['/admin/products']);
   }
 
 

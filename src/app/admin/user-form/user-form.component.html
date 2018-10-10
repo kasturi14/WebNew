@@ -46,7 +46,7 @@
 
       <div class="form-group">
         <label for="about">About</label>
-        <textarea class="form-control" id="about" name="about" [(ngModel)]="product.about" #about="ngModel" rows="3"></textarea>
+        <textarea maxlength="150" class="form-control" id="about" name="about" [(ngModel)]="product.about" #about="ngModel" rows="3"></textarea>
       </div>
     
     
@@ -60,7 +60,7 @@
       </div>
     
     
-      <button class="btn btn-success">Save</button>
+      <button class="btn btn-success" routerLink='/admin/products'>Save</button>
       </form>
 </div>
 

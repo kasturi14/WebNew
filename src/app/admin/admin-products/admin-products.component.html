@@ -10,15 +10,16 @@
     <tbody>
         <tr *ngFor="let p of products$ | async">
             <td>{{p.Name}}</td>
-            <td>{{p.dp.day}}.{{p.dp.month}}.{{p.dp.year}}-{{p.dpe.day}}.{{p.dpe.month}}.{{p.dpe.year}}</td>
+            <td>{{p.dp.day}}.{{p.dp.month}}.{{p.dp.year}} - {{p.dpe.day}}.{{p.dpe.month}}.{{p.dpe.year}}</td>
             <td>
-                <button class="btn btn-light" (click)="delete(p.key)">delete</button>
-                <button class="btn btn-light" [routerLink]="" (click)="edit(p.key)">Edit</button>
+                <button class="c btn btn-light" [routerLink]="" (click)="edit(p.key)">Edit</button>
+                <button class="c btn btn-light" (click)="delete(p.key)">Delete</button>                
             </td>
         </tr>
     </tbody>
 </table>
-    <p align='center'>
-        <a routerLink="/admin/products/new" class="btn btn-dark">Add new Event</a>
-    </p>
+<span>
+        <a routerLink="/admin/products/new" class="b btn btn-light">Add new Event</a>
+    </span>
+    
 </div>

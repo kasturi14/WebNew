@@ -1,5 +1,7 @@
 import { Injectable } from '@angular/core';
 import { ProductsComponent } from './products/products.component';
+import { InnerSubscriber } from 'rxjs/internal-compatibility';
+import { ISubscription } from 'rxjs/Subscription';
 
 @Injectable({
   providedIn: 'root'
@@ -7,6 +9,7 @@ import { ProductsComponent } from './products/products.component';
 export class EventService {
   finally:string;
   edit:string;
+
 
   constructor() { }
 
@@ -28,4 +31,6 @@ export class EventService {
   {
     return this.edit;
   }
+
+  
 }

@@ -4,8 +4,8 @@ import { UsersaveService } from '../../usersave.service';
 import { Router } from '@angular/router';
 import {take} from 'rxjs/operators';
 import { AngularFireDatabase, AngularFireList } from 'angularfire2/database';
-import { Observable, Subscription } from 'rxjs';
 import { EventService } from '../../event.service';
+import { ISubscription } from 'rxjs/Subscription';
 
 
 @Component({
@@ -13,12 +13,12 @@ import { EventService } from '../../event.service';
   templateUrl: './user-form.component.html',
   styleUrls: ['./user-form.component.css']
 })
-export class UserFormComponent implements OnInit,OnDestroy {
+export class UserFormComponent implements OnInit,OnDestroy{
   categories$;
   model;
   key;
   product={};
-  private eventsSubscription: Subscription;
+  private eventsSubscription: ISubscription;
 
   constructor(private edit2:EventService,private db:AngularFireDatabase,private router:Router,private categoryService: CategoriesService , private usersaveService: UsersaveService) { 
     this.categories$=categoryService.getCategories().snapshotChanges();
@@ -30,19 +30,19 @@ export class UserFormComponent implements OnInit,OnDestroy {
   {
     if(this.key)  this.usersaveService.update(this.key,this.product);
     else  return this.usersaveService.create(user);
-    this.router.navigate(['/admin/products']);
+    this.router.navigate(['/products']);
   }
 
   ngOnInit() {
     if (this.key)
     {
       this.eventsSubscription=this.usersaveService.get(this.key).subscribe(p => this.product = p);
+      
     }
   }
 
-  ngOnDestroy(){
-    this.eventsSubscription.unsubscribe();
-  }
-
-
+    ngOnDestroy()
+    {
+      this.eventsSubscription.unsubscribe();
+    } 
 }

@@ -51,6 +51,15 @@
       <label for="about">About</label>
       <textarea class="form-control" id="about" name="about" ngModel #about="ngModel" rows="3"></textarea>
     </div>
+
+    <div class="form-group">
+      <label for="facebookUrl">Facebook Url</label>
+      <input #facebookUrl="ngModel" [(ngModel)]="product.facebookUrl" name="facebookUrl" id="facebookUrl" type="text" class="form-control" required url>
+      <div class="alert alert-danger" *ngIf="facebookUrl.touched && facebookUrl.invalid">
+        <div *ngIf="facebookUrl.errors.required">*Required*</div>
+        <div *ngIf="facebookUrl.errors.url">Image url should be valid</div>
+      </div>
+  </div>
   
     <div class="form-group">
       <label for="image">Image</label>

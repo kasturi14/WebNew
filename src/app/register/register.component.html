@@ -58,7 +58,7 @@
 
     <div class="form-group">
       <label for="facebookUrl">Facebook Url</label>
-      <input #facebookUrl="ngModel" [(ngModel)]="product.facebookUrl" name="facebookUrl" id="facebookUrl" type="text" class="form-control" required url>
+      <input #facebookUrl="ngModel" ngModel name="facebookUrl" id="facebookUrl" type="text" class="form-control" required url>
       <div class="alert alert-danger" *ngIf="facebookUrl.touched && facebookUrl.invalid">
         <div *ngIf="facebookUrl.errors.required">*Required*</div>
         <div *ngIf="facebookUrl.errors.url">Image url should be valid</div>

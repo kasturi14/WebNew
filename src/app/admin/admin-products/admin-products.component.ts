@@ -43,6 +43,11 @@ export class AdminProductsComponent implements OnInit {
     this.edit1.setid(key);
     this.route.navigate(['/admin/products/',key]);
   }
+
+  unsubs()
+  {
+    this.route.navigate(['/admin/products/new']);
+  }
 ngOnInit()
 {}
 }

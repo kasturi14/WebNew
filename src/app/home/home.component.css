@@ -43,7 +43,7 @@
 /*image grid */
 .contain {
     position: relative;
-    background: url('src/app/home/photo.jpeg');
+    background: url('photo.jpeg');
     background-repeat: no-repeat;
     background-size: cover; 
     background-attachment: fixed;

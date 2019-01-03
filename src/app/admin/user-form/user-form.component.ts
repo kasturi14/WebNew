@@ -1,4 +1,4 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Component, OnInit, OnDestroy, ViewChild } from '@angular/core';
 import { CategoriesService } from '../../categories.service';
 import { UsersaveService } from '../../usersave.service';
 import { Router } from '@angular/router';
@@ -6,6 +6,7 @@ import {take} from 'rxjs/operators';
 import { AngularFireDatabase, AngularFireList } from 'angularfire2/database';
 import { EventService } from '../../event.service';
 import { ISubscription } from 'rxjs/Subscription';
+import { NgForm } from '@angular/forms';
 
 
 @Component({
@@ -13,7 +14,8 @@ import { ISubscription } from 'rxjs/Subscription';
   templateUrl: './user-form.component.html',
   styleUrls: ['./user-form.component.css']
 })
-export class UserFormComponent implements OnInit,OnDestroy{
+export class UserFormComponent implements OnInit{
+
   categories$;
   model;
   key;
@@ -28,8 +30,11 @@ export class UserFormComponent implements OnInit,OnDestroy{
   }
   save(user)
   {
-    if(this.key)  this.usersaveService.update(this.key,this.product);
-    else  return this.usersaveService.create(user);
+    if(this.key) 
+    {
+       this.usersaveService.update(this.key,this.product);
+       this.eventsSubscription.unsubscribe();
+    }
     this.router.navigate(['/products']);
   }
 
@@ -41,8 +46,4 @@ export class UserFormComponent implements OnInit,OnDestroy{
     }
   }
 
-    ngOnDestroy()
-    {
-      this.eventsSubscription.unsubscribe();
-    } 
 }

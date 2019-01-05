@@ -27,6 +27,7 @@
           <div ngbDropdownMenu class="dropdown-menu" aria-labelledby="dropdown01">
               <a *ngIf="appUser.isAdmin" class="dropdown-item" routerLink="/admin/products">Manage Events</a>
               <a *ngIf="appUser.isAdmin" class="dropdown-item" routerLink="/admin/registered_users">Registered Users</a>
+              <a *ngIf="appUser.isAdmin" class="dropdown-item" routerLink="/admin/products/new">Add New Event</a>
               <a class="dropdown-item" routerLink="/admin/login">Admin Login</a>
             <a class="dropdown-item" (click)="logout()">Logout</a>
           </div>

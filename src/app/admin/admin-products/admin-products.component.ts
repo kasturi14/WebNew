@@ -1,10 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { UsersaveService } from '../../usersave.service';
 import { AngularFireList, AngularFireDatabase } from 'angularfire2/database';
-import { Observable } from 'rxjs';
-import { take } from 'rxjs/operator/take';
+import { Observable } from 'rxjs/Observable';
 import { EventService } from '../../event.service';
 import { Router } from '@angular/router';
+import {map} from 'rxjs/operators';
 
 
 
@@ -22,11 +22,11 @@ export class AdminProductsComponent implements OnInit {
   constructor(private route:Router,private usersave1: UsersaveService,private db:AngularFireDatabase,private edit1:EventService) {
 
     this.productRef = db.list('/usersave');
-    this.products$ = this.productRef.snapshotChanges().map(changes => {
+    this.products$ = this.productRef.snapshotChanges().pipe(map(changes => {
         return changes.map(c => ({ key: c.payload.key, ...c.payload.val() 
-    }));
-    
-    });
+    }))
+  })
+    );
 
   }
 

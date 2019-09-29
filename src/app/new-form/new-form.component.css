@@ -1,21 +1,19 @@
 .full-contain{
-    position: absolute;
-    background: url('https://us.123rf.com/450wm/crazyass/crazyass1602/crazyass160200025/54248995-blur-abstract-bokeh-of-street-city-night-light-background-abstract-traffic-background-black-and-whit.jpg?ver=6');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    color: #fff;
+    margin-top: 100px;
+    color: #fecea8;
     width: 100%;
 }
 h1{
     padding: 20px;
     width: 100%;
-    text-align: center;
-	text-shadow: 10px 10px 15px gray;	
+    text-align: center;	
 }
-.form-container  {
-    width: 600px;
-    margin-left: 370px;
+.form-container form  {
+    padding: 0 15%;
+}
+.form-container .buttonsave {
+    width: 100%;
+    text-align: center;
 }
 *, *::before, *::after {
     box-sizing: border-box;
@@ -25,29 +23,7 @@ button.btn.btn-light.calendar,
 .input-group > .form-control:not(:last-child), .input-group > .custom-select:not(:last-child) {
     margin: 0;
 }
-div.input-group-append[_ngcontent-c1], 
-button.btn.btn-light.calendar[_ngcontent-c1], 
-.input-group[_ngcontent-c1] > .form-control[_ngcontent-c1]:not(:last-child), 
-.input-group[_ngcontent-c1] > .custom-select[_ngcontent-c1]:not(:last-child) 
-{
-    margin: 0;
-    width: 50px;
-}
-input{
-    box-shadow:10px 10px 15px #A6A5AC;
-}
-input:hover,textarea:hover,select:hover {
-    background-color: #ddd;
-}
-.btn{
-    width: 200px;
-    margin: 70px 200px;
-    padding: 15px;
-    box-shadow:10px 10px 15px #A6A5AC;    
-}
-textarea,select {
-    box-shadow:10px 10px 15px #A6A5AC;
-}
+
 label {
     padding-left: 10px;
     font-size: 18px;

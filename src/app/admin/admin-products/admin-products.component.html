@@ -1,25 +1,26 @@
 <div class="main-content">
-<table class='table'>
-    <thead>
-        <tr>
-            <th>Event</th>
-            <th>Date</th>
-            <th>Action</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr *ngFor="let p of products$ | async">
-            <td>{{p.Name}}</td>
-            <td>{{p.dp.day}}.{{p.dp.month}}.{{p.dp.year}} - {{p.dpe.day}}.{{p.dpe.month}}.{{p.dpe.year}}</td>
-            <td>
-                <button class="c btn btn-light"  (click)="edit(p.key)">Edit</button>
-                <button class="c btn btn-light" (click)="delete(p.key)">Delete</button>                
-            </td>
-        </tr>
-    </tbody>
-</table>
-<span>
-        <a class="b btn btn-dark" (click)="unsubs()">Add new Event</a>
-    </span>
-    
+    <div class="contain">
+        <table class='table'>
+            <thead>
+                <tr>
+                    <th>Event</th>
+                    <th>Date</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let p of products$ | async">
+                    <td>{{p.Name}}</td>
+                    <td>{{p.dp.day}}.{{p.dp.month}}.{{p.dp.year}} - {{p.dpe.day}}.{{p.dpe.month}}.{{p.dpe.year}}</td>
+                    <td>
+                        <button class="c btn btn-light" (click)="edit(p.key)">Edit</button>
+                        <button class="c btn btn-light" (click)="delete(p.key)">Delete</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="buttonadd">
+            <a class="b btn btn-dark" (click)="unsubs()">Add new Event</a>
+        </div>
+    </div>
 </div>

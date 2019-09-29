@@ -1,134 +1,95 @@
-<div class="Body">
-  
-  <link href="https://fonts.googleapis.com/css?family=Coiny" rel="stylesheet">
-  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Coiny" rel="stylesheet">
+<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 
-  
-  <div class="image-container">
-    <ngb-carousel *ngIf="images">
-      <ng-template ngbSlide>
-        <img src="https://images.unsplash.com/photo-1532649538693-f3a2ec1bf8bd?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=67e698aabba0e095f5a9804736866fa2&auto=format&fit=crop&w=750&q=80" width='100%' height="600">
-        <div class="carousel-caption">
-          <h1>First slide label</h1>
-          <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-        </div>
-      </ng-template>
-      <ng-template ngbSlide>
-        <img src="https://images.unsplash.com/photo-1522158637959-30385a09e0da?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=7ed355dbd6d0efe1d3c158d01f89d833&auto=format&fit=crop&w=750&q=80" width='100%' height="600">
-        <div class="carousel-caption">
-          <h1>Second slide label</h1>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        </div>
-      </ng-template>
-      <ng-template ngbSlide>
-        <img src="https://images.unsplash.com/photo-1505373877841-8d25f7d46678?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=f1d076508395c99b386351d72a95c09e&auto=format&fit=crop&w=700&q=80" width='100%' height="600">
-        <div class="carousel-caption">
-          <h1>Third slide label</h1>
-          <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
-        </div>
-      </ng-template>
-    </ngb-carousel>
-  </div>
 
-  <div class="lls">
-    <p>Live | Love | Sparkle </p>
-    <p id="text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-      Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
-      when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
-      It has survived not only five centuries, but also the leap into electronic typesetting, 
-      remaining essentially unchanged. It was popularised in the 1960s with the release of 
-      Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing 
-      software like Aldus PageMaker including versions of Lorem Ipsum.</p><br/>
-    <p id="text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
-        when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
-        It has survived not only five centuries, but also the leap into electronic typesetting, 
-        remaining essentially unchanged. It was popularised in the 1960s with the release of 
-        Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing 
-        software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-  </div>
-
-  <div class="contain">
-    <div class="imgs">
-      <div class="row">
-        <div class="item col-md-4">
-          <div class="flip-box">
-            <div class="flip-box-inner">
-              <div class="flip-box-front">
-                <img src="https://c1.staticflickr.com/2/1668/25293249072_1214789e34_b.jpg" style="width:400px;height:300px">
-              </div>
-              <div class="flip-box-back">
-                <h4>Events</h4><br>
-                <button type="button" class="btn btn-info" routerLink="/products">Know more</button>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="item col-md-4">
-          <div class="flip-box">
-            <div class="flip-box-inner">
-              <div class="flip-box-front">
-                <img src="https://www.army.mil/e2/c/images/2016/11/16/457276/size0.jpg" style="width:400px;height:300px">
-              </div>
-              <div class="flip-box-back">
-                <h4>Registrations</h4><br>
-                <button type="button" class="btn btn-info" routerLink="/shopping-cart">Know more</button>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="item col-md-4">
-          <div class="flip-box">
-            <div class="flip-box-inner">
-              <div class="flip-box-front">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSgz11SZjdHjJm1WAnHswa4S2z5pTz4mDQbXEFik17i9Qpi6WhJ" style="width:400px;height:300px">
-              </div>
-              <div class="flip-box-back">
-                <h4>About Us</h4><br>
-                <button type="button" class="btn btn-info" routerLink="/about">Know more</button>
-              </div>
-            </div>
-          </div>
-        </div>
+<section class="carousel-slides">
+  <ngb-carousel *ngIf="images">
+    <ng-template ngbSlide>
+      <img src="https://www.elim.edu/wp-content/uploads/2017/02/worship.jpg"
+        style="background-position: 50% 50%; background-size: contain; width: 100%;height: 700px;margin: auto;">
+      <div class="carousel-caption">
+        <h1>IMPULSE</h1>
+        <p>COME TO LIFE!</p>
       </div>
+    </ng-template>
+    <ng-template ngbSlide>
+      <img src="https://kristujayanti.edu.in/studentlife/images/arts-culture.jpg"
+        style="background-position: 50% 50%; background-size: contain; width: 100%;height: 700px;margin: auto;">
+      <div class="carousel-caption">
+        <h1>IMPULSE</h1>
+        <p>COME TO LIFE!</p>
+      </div>
+    </ng-template>
+    <ng-template ngbSlide>
+      <img src="http://jgcpa.jgcolleges.org/wp-content/uploads/2018/05/Slide-3.png"
+        style="background-position: 50% 50%; background-size: contain; width: 100%;height: 700px;margin: auto;">
+      <div class="carousel-caption">
+        <h1>IMPULSE</h1>
+        <p>COME TO LIFE!</p>
+      </div>
+    </ng-template>
+    <ng-template ngbSlide>
+      <img src="https://images.unsplash.com/photo-1527261834078-9b37d35a4a32?ixlib=rb-1.2.1&w=1000&q=80"
+        style="background-position: 50% 50%; background-size: contain; width: 100%;height: 700px;margin: auto;">
+      <div class="carousel-caption">
+        <h1>IMPULSE</h1>
+        <p>COME TO LIFE!</p>
+      </div>
+    </ng-template>
+  </ngb-carousel>
+</section>
+<section class="about">
+  <h2>Live | Love | Sparkle </h2>
+  <div class="p">
+    <p id="text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+      Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+      when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+      It has survived not only five centuries, but also the leap into electronic typesetting,
+      remaining essentially unchanged. It was popularised in the 1960s with the release of
+      Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing
+      software like Aldus PageMaker including versions of Lorem Ipsum.</p><br />
+    <p id="text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+      Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+      when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+      It has survived not only five centuries, but also the leap into electronic typesetting,
+      remaining essentially unchanged. It was popularised in the 1960s with the release of
+      Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing
+      software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+  </div>
+</section>
+
+<section class="s-social">
+  <div class="social">
+    <h4>FIND US HERE</h4>
+    <div class="row">
+      <ul class="second">
+        <li><a routerLink="/"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+        <li><a routerLink="/"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+        <li><a routerLink="/"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+        <li><a routerLink="/"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+        <li><a routerLink="/"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+      </ul>
     </div>
   </div>
+  <div class="eemail">
+    <h4>HIT US UP!</h4>
+    <h6>If you're interested in participating, do hit us up. We can't wait to hear from you!</h6>
+    <div class="input-group flex-nowrap">
+      <input type="text" class="form-control" placeholder="Name" aria-label="Username"
+        aria-describedby="addon-wrapping">
+    </div>
+    <div class="input-group flex-nowrap">
+      <input type="text" class="form-control" placeholder="Email" aria-label="Username"
+        aria-describedby="addon-wrapping">
+    </div>
+    <div class="input-group flex-nowrap">
+      <textarea name="message" id="message" cols="30" rows="10" class="form-control" placeholder="Message"
+        aria-label="Username" aria-describedby="addon-wrapping"></textarea>
+    </div>
 
-  <div class="footer">
-    <div class="black-foot">
-      <div class="row">
-        <ul class="big link">LINKS</ul>
-        <ul class="big social">SOCIAL</ul>
-      </div>
-      <div class="row">
-        <ul class="small first">
-            <li><a routerLink="/">Home</a></li>
-            <li><a routerLink="/about">About</a></li>
-            <li><a routerLink="/products">Events</a></li>
-            <li><a routerLink="/about">JoinUs</a></li>
-  
-        </ul>       
-        <ul class="small second">
-            <li>
-              <a routerLink="/"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-            </li>
-            <li>
-              <a routerLink="/"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
-            </li>
-            <li>
-              <a routerLink="/"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
-            </li>
-            <li>
-              <a routerLink="/"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-            </li>
-            <li>
-              <a routerLink="/"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-            </li>
-        </ul>
-      </div>
+    <div class="send-button">
+      <button type="button" class="btn btn-send">Send</button>
     </div>
   </div>
-
-</div>
-
-
+  <h6>Copyright @Impulse 2019 <i class="fas fa-heart"></i></h6>
+</section>

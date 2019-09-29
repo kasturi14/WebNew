@@ -1,178 +1,199 @@
-*{
-    margin: 0 ;
-    padding: 0 ;
+* {
+    margin: 0;
+    padding: 0;
 }
-.carousel-1 .item {
-    width: 100%; /*slider width*/
-    max-height: 600px; /*slider height*/
+.carousel-slides {
+    height: 700px;
+    width: 100%;
 }
-.carousel-1 .item img {
-    width: 100%; /*img width*/
+.ngb-carousel {
+    width: 100%;
+    height: auto;
 }
-
 .carousel-caption {
-    padding-bottom: 250px;
-    color: #000;
-    font-weight: bolder;
-}
-.carousel-caption h2 {
-    font-size: 50px;
-    text-transform: uppercase;
-    color: #000;
-}
-
-.lls {
-    list-style: none;
-    position: relative;
-    text-align: center;
-    margin: 0;
-    padding: 50px;
-    font-size: 30px;
-    background: #060606;
-    opacity: 0.9;
-    color: white;
-    z-index: -1;
-    background: url('https://us.123rf.com/450wm/crazyass/crazyass1602/crazyass160200025/54248995-blur-abstract-bokeh-of-street-city-night-light-background-abstract-traffic-background-black-and-whit.jpg?ver=6');
-    background-attachment: fixed;
-    background-size: cover;
-}
-#text {
-    font-size: 20px;
-}
-
-/*image grid */
-.contain {
-    position: relative;
-    background: url('photo.jpeg');
-    background-repeat: no-repeat;
-    background-size: cover; 
-    background-attachment: fixed;
-    margin:0px;
-}
-.imgs .row {
-    padding: 30px;
-    padding-left: 40px;
-}
-.item {
-    position: relative;
-    width: 100%;
-}
-.image {
-    opacity: 1;
-    width: 100%;
-    height: 100%;
-    transition: .2s ease;
-    backface-visibility: hidden;
-}
-.desc {
-    transition: .2s ease;
-    opacity: 0;
-    position: absolute;
+    /* position: absolute; */
     top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    -ms-transform: translate(-50%,-50%);
-    text-align: center;
+    transform: translateY(-50%);
 }
-.desc p {
-    font-weight: 1000;
+.carousel-caption h1 {
+    font-size: 100px;
 }
-.item:hover .image {
-    opacity: 0.5;
+.carousel-caption p {
+    font-size: 30px;
 }
-.item:hover .desc {
-    opacity: 1;
-}
-
-
-/*flip*/
-/* The flip box container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
-.flip-box {
-    width: 400px;
-    height: 300px;
-    perspective: 1000px; /* Remove this if you don't want the 3D effect */
-  }
-  
-  /* This container is needed to position the front and back side */
-  .flip-box-inner {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    transition: transform 0.8s;
-    transform-style: preserve-3d;
-  }
-  
-  /* Do an horizontal flip when you move the mouse over the flip box container */
-  .flip-box:hover .flip-box-inner {
-    transform: rotateY(180deg);
-  }
-  
-  /* Position the front and back side */
-  .flip-box-front, .flip-box-back {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    backface-visibility: hidden;
-  }
-  
-  /* Style the front side (fallback if image is missing) */
-  .flip-box-front {
-    background-color: #bbb;
-    color: black;
-  }
-  
-  /* Style the back side */
-  .flip-box-back {
+.about {
+    padding: 70px;
     background-color: black;
-    color: white;
-    padding: 100px;
-    font-size: 20px;
-    transform: rotateY(180deg);
-  }
-  .btn{
-      padding: 10px 20px;
-  }
-
-/*footer*/
-.black-foot {
-    background: #060606;
-    color: white;
-    margin: 0;
-    padding:2em;
 }
-div.row{
+.about h2 {
+    text-align: center;
+    padding: 30px;
+    color: #e84a5f;
+}
+.about .p {
+    text-align: justify;
+    font-size: 20px;
+    background: -webkit-linear-gradient(#e84a5f,#ff847c,#fecea8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    padding: 30px;
+}
+.s-social {
+    background-color: #fecea8;
+    padding: 50px;
+}
+.s-social .social h4, .eemail h4 {
     width: 100%;
-    padding-top: 50px;
-}
-.black-foot ul{
-    display: flex;
-    justify-content: space-around;
-}
-.black-foot .big {
-    font-size: 25px;
-}
-.black-foot .big,
-.black-foot .small{
-    width: 45%;
-	display: flex;
-    justify-content: space-around;
-    margin-left: 20px;
-    margin-right: 20px;
+    text-align: center;
 }
 
-.black-foot ul li {
-    list-style: none;
-    font-size: 20px;
-	width: 100px;
-	height: 100px;
-	text-align: center;
-	line-height: 30px;
-	margin: 0 50px;
-	border-radius: 50%;
-	color: #000635;
-	transition: 0.5s;
+.s-social .social .row ul {
+    width: 100%;
+    padding: 70px 150px;
+    text-align: center;
 }
-ul.small.first{
+.s-social .social .row ul li{
+    float: left;
     text-decoration: none;
+    list-style-type: none;
+    width: 20%;
+}
+.s-social .social .row ul li a{
+    color: #000;
+    cursor: pointer;
+    font-size: 25px;
+    transition: 0.5s;
+}
+.s-social .social .row ul li a:hover{
+    font-size: 30px;
+    transition: 0.5s;
+}
+
+.topages {
+    background-color: #fecea8;
+    padding: 70px;
+}
+.topages .links .row ul {
+    width: 100%;
+    padding: 30px;
+    text-align: center;
+}
+.topages .links .row ul li {
+    float: left;
+    text-decoration: none;
+    width: 25%;
+    list-style-type: none;
+}
+.topages .links .row ul li a{
+    color: black;
+    cursor: pointer;
+    text-decoration: none;
+    transition: 0.5s;
+    text-align: center;
+}
+.topages .links .row ul li a:hover {
+    font-size: 25px;
+    transition: 0.5s;
+}
+.s-social h6 i{
+    padding-left: 5px;
+}
+.eemail {
+    padding: 70px 300px;
+    width: 100%;
+    text-align: center;
+}
+.eemail h6 {
+    padding: 10px 0;
+}
+.eemail .input-group{
+    padding: 10px;
+    text-align: center;
+}
+.eemail .input-group input,.eemail .input-group textarea {
+    text-indent: 20px;
+}
+
+.send-button {
+    width: 100%;
+    padding: 30px;
+}
+.send-button button {
+    background-color: #2a363b;
+    color: #fecea8;
+    padding: 10px 25px;
+}
+
+
+
+
+
+@media (max-width: 1000px)
+{
+    .eemail {
+        padding: 70px 150px;
+    }
+}
+@media(max-width: 700px)
+{
+    .about .p {
+        padding: 0;
+    }
+    .eemail {
+        padding: 50px;
+    }
+    .carousel-caption h1 {
+        font-size: 70px;
+    }
+    .carousel-caption p {
+        font-size: 20px;
+    }
+}
+@media (max-width: 600px) 
+{
+    .s-social .social .row ul li{
+        clear: both;
+        text-decoration: none;
+        list-style-type: none;
+        width: 100%;
+        padding: 20px;
+    }
+    .carousel-caption h1 {
+        font-size: 60px;
+    }
+    .carousel-caption p {
+        font-size: 30px;
+    }
+}
+@media (max-width: 500px)
+{
+    .topages .links .row ul li {
+        clear: both;
+        text-decoration: none;
+        width: 100%;
+        list-style-type: none;
+        text-align: center;
+        padding: 20px;
+    }
+    .eemail {
+        padding: 30px;
+    }
+    .carousel-caption h1 {
+        font-size: 50px;
+    }
+    .carousel-caption p {
+        font-size: 30px;
+    }
+}
+@media(max-width: 430px)
+{
+    .about {
+        padding: 30px;
+    }
+    .s-social {
+        padding: 50px 10px;
+    }
+    .eemail {
+        padding: 0;
+    }
 }

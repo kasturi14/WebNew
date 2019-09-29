@@ -1,43 +1,40 @@
-<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
-    <a class="navbar-brand n" routerLink="/">Home</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-  
-    <div class="collapse navbar-collapse" id="navbarsExampleDefault">
-      <ul class="navbar-nav mr-auto">
+<nav class="main-nav navbar navbar-expand-lg navbar-light fixed-top ">
+  <a class="navbar-brand" routerLink="/">Home</a>
+  <button class="navbar-toggler navbar-dark" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse coll-bg navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link n" routerLink="/shopping-cart">All Registrations</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link n" routerLink="/products">Events</a>
+      </li>
+
+      <ng-template #anonymousUser>
         <li class="nav-item">
-          <a class="nav-link n" routerLink="/shopping-cart">All Registrations</a>
+          <a class="nav-link n" (click)="login()">Login with Google</a>
         </li>
-        <li class="nav-item">
-            <a class="nav-link n" routerLink="/products">Events</a>
-          </li>
-       
-        <ng-template #anonymousUser>
-            <li class="nav-item">
-              <a class="nav-link n" (click)="login()">Login with Google</a>
-            </li>
-           
-        </ng-template>
-        
-        <li ngbDropdown *ngIf="appUser; else anonymousUser" class="nav-item dropdown">
-          <a ngbDropdownToggle class=" n nav-link dropdown-toggle" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            {{appUser.name}}
-          </a>
-          <div ngbDropdownMenu class="dropdown-menu" aria-labelledby="dropdown01">
-              <a *ngIf="appUser.isAdmin" class="dropdown-item" routerLink="/admin/products">Manage Events</a>
-              <a *ngIf="appUser.isAdmin" class="dropdown-item" routerLink="/admin/registered_users">Registered Users</a>
-              <a *ngIf="appUser.isAdmin" class="dropdown-item" routerLink="/admin/products/new">Add New Event</a>
-              <a class="dropdown-item" routerLink="/admin/login">Admin Login</a>
-            <a class="dropdown-item" (click)="logout()">Logout</a>
-          </div>
-        </li>
-      </ul>
-    </div>
-  </nav>
 
+      </ng-template>
 
-
-
-
-
+      <li ngbDropdown *ngIf="appUser; else anonymousUser" class="nav-item dropdown">
+        <a ngbDropdownToggle class=" n nav-link dropdown-toggle" id="dropdown01" data-toggle="dropdown"
+          aria-haspopup="true" aria-expanded="false">
+          {{appUser.name}}
+        </a>
+        <div ngbDropdownMenu class="dropdown-menu" aria-labelledby="dropdown01">
+          <a *ngIf="appUser.isAdmin" class="dropdown-item" routerLink="/admin/products">Manage Events</a>
+          <a *ngIf="appUser.isAdmin" class="dropdown-item" routerLink="/admin/registered_users">Registered
+            Users</a>
+          <a *ngIf="appUser.isAdmin" class="dropdown-item" routerLink="/admin/products/new">Add New Event</a>
+          <a class="dropdown-item" routerLink="/admin/login">Admin Login</a>
+          <a class="dropdown-item" (click)="logout()">Logout</a>
+        </div>
+      </li>
+    </ul>
+  </div>
+</nav>

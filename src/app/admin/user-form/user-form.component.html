@@ -1,9 +1,11 @@
 <div class="full-contain">
-<div class="form-container">
-  <form #f="ngForm" (ngSubmit)="save(f.value)">
+  <h1>EDIT FORM</h1>
+  <div class="form-container">
+    <form #f="ngForm" (ngSubmit)="save(f.value)">
       <div class="form-group">
         <label for="Name">Event's Name</label>
-        <input #Name="ngModel" [(ngModel)]="product.Name" name="Name" id="Name" type="text" class="form-control" required>
+        <input #Name="ngModel" [(ngModel)]="product.Name" name="Name" id="Name" type="text" class="form-control"
+          required>
         <div class="alert alert-danger" *ngIf="Name.touched && Name.invalid">
           Name is Required
         </div>
@@ -12,8 +14,8 @@
       <div class="form-group">
         <label for="Date">From-</label>
         <div class="input-group">
-        <input class="form-control" placeholder="yyyy-mm-dd"
-          name="dp" [(ngModel)]="product.dp" ngbDatepicker #d="ngbDatepicker" (navigate)="date = $event.next">
+          <input class="form-control" placeholder="yyyy-mm-dd" name="dp" [(ngModel)]="product.dp" ngbDatepicker
+            #d="ngbDatepicker" (navigate)="date = $event.next">
           <div class="input-group-append">
             <button class="btn btn-light calendar" (click)="d.toggle()" type="button"></button>
           </div>
@@ -23,15 +25,15 @@
       <div class="form-group">
         <label for="EDate">To-</label>
         <div class="input-group">
-        <input class="form-control" placeholder="yyyy-mm-dd"
-          name="dpe" [(ngModel)]="product.dpe" ngbDatepicker #e="ngbDatepicker">
+          <input class="form-control" placeholder="yyyy-mm-dd" name="dpe" [(ngModel)]="product.dpe" ngbDatepicker
+            #e="ngbDatepicker">
           <div class="input-group-append">
             <button class="btn btn-light calendar" (click)="e.toggle()" type="button"></button>
           </div>
         </div>
       </div>
-      
-    
+
+
       <div class="form-group">
         <label for="category">Category</label>
         <select [(ngModel)]="product.category" name="category" id="category" class="form-control">
@@ -45,26 +47,26 @@
 
       <div class="form-group">
         <label for="about">About</label>
-        <textarea maxlength="150" class="form-control" id="about" name="about" [(ngModel)]="product.about" #about="ngModel" rows="3"></textarea>
+        <textarea maxlength="150" class="form-control" id="about" name="about" [(ngModel)]="product.about"
+          #about="ngModel" rows="3"></textarea>
       </div>
-    
-    
+
+
       <div class="form-group">
-          <label for="imageUrl">Image Url</label>
-          <input #imageUrl="ngModel" [(ngModel)]="product.imageUrl" name="imageUrl" id="imageUrl" type="text" class="form-control" required url>
-          <div class="alert alert-danger" *ngIf="imageUrl.touched && imageUrl.invalid">
-            <div *ngIf="imageUrl.errors.required">*Required*</div>
-            <div *ngIf="imageUrl.errors.url">Image url should be valid</div>
-          </div>
+        <label for="imageUrl">Image Url</label>
+        <input #imageUrl="ngModel" [(ngModel)]="product.imageUrl" name="imageUrl" id="imageUrl" type="text"
+          class="form-control" required url>
+        <div class="alert alert-danger" *ngIf="imageUrl.touched && imageUrl.invalid">
+          <div *ngIf="imageUrl.errors.required">*Required*</div>
+          <div *ngIf="imageUrl.errors.url">Image url should be valid</div>
+        </div>
       </div>
-    
-    
-      <button class="btn btn-success">Save</button>
-      </form>
-</div>
+
+      <div class="buttonsave">
+        <button class="btn btn-success">Save</button>
+      </div>
+
+    </form>
+  </div>
 
 </div>
-
-
-
-  

@@ -1,10 +1,38 @@
 <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+
+<div class="main-content">
+  <h1>ALL REGISTRATIONS</h1>
+  <div class="row">
+    <ng-container *ngFor="let p of registrations$  | async; let i=index">
+      <div class="col-sm">
+        <div class="box">
+          <div class="image">
+            <img class="person-img" src={{p.imageURL}} alt="Image">
+          </div>
+          <div class="text">
+            <h5 class="title">{{p.Name}}<a href="{{p.facebookUrl}}"><i class="size fa fa-facebook-official" aria-hidden="true"></i></a></h5>
+            <p class="ptext">
+            <p>Hey, I'm from {{p.Stream}}, {{p.Year}}</p>
+            <p class="ptext">
+            <p>Event: {{p.event}}</p>
+            <div class="about">
+                {{p.about}}<br><br>
+            </div>
+          </div>
+          <div *ngIf="(i+1) % 2 === 0"></div>
+        </div>
+      </div>
+    </ng-container>
+  </div>
+</div>
+
+<!-- 
 <div class="main-content" height='100%' width='100%'>
   <h1>All Registrations</h1>
   <div class="row">
     <ng-container *ngFor="let p of registrations$  | async; let i=index">
       <div class="col-sm">
-
           <div class="flip-box">
               <div class="flip-box-inner">
                 <div class="flip-box-front">
@@ -17,6 +45,7 @@
                     </div>
                   </div>
                 </div>
+
                 <div class="about flip-box-back">
                   {{p.about}}<br><br>
                   <a href="{{p.facebookUrl}}"><i class="size fa fa-facebook-official" aria-hidden="true"></i></a>
@@ -28,6 +57,5 @@
       </div>
     </ng-container>
   </div>  
-</div>
-
-
+</div> 
+-->

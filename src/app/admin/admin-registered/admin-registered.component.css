@@ -1,41 +1,32 @@
 .main-content {
-    position:absolute;
-    height: 555px;
-    background: url('https://us.123rf.com/450wm/crazyass/crazyass1602/crazyass160200025/54248995-blur-abstract-bokeh-of-street-city-night-light-background-abstract-traffic-background-black-and-whit.jpg?ver=6');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    /* background-color: #ddd; */
     width: 100%;
-    color: #fff;
+    color: #fecea8;
 }
 table{
     width: 100%;
-    /* margin-left: 180px; */
-    margin-top: 1px;
-    /* width: 70%; */
+    margin-top: 100px;
     font-family: 'Open Sans', sans-serif;
     text-align: center;
 }
 thead{
     background-color: #141429;
-    color: #fff;
     border: none;
     font-size: 20px;
+    color: #fecea8;
 }
 th {
     width: 400px;
 }
+tbody tr {
+    color: #fecea8;
+    transition: 0.5s;
+}
 tbody tr:hover {
-    background-color: #999;
-    color: #000;
+    background-color: #fecea8;
+    color: #2a363b;
     border: none;
+    transition: 0.5s;
 }
 td{
     font-size: 17px;
-}
-.btn{
-    position: relative;
-    width: 200px;
-    box-shadow: 5px 5px 20px #A6A5AC;
 }

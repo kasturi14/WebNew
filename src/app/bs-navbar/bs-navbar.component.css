@@ -1,14 +1,26 @@
-.dropdown-toggle{
+nav.main-nav {
+    background-color: transparent;
+}
+.navbar-light .navbar-brand  {
+    color: #fecea8;
+    font-size: 30px;
+}
+.navbar-light .navbar-nav .nav-link {
+    color: #fecea8;
+    font-size: 22px;
+}
+.collapse ul li a{
     cursor: pointer;
 }
-.navbar{
-    margin: 0;
-    padding: 0;
-    height: 70px;
+@media (max-width: 992px) {
+    .coll-bg {
+        margin: 0;
+        padding: 20px;
+        background-color: #fecea8;
+        color: #000;
+    }
+    .navbar-light .navbar-nav .nav-link {
+        color: black;
+        font-size: 22px;
+    }
 }
-.n{
-    font-size: 17px;
-    padding: 15px;
-    padding-left: 20px;
-cursor:pointer;
-} 

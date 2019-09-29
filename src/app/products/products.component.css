@@ -1,94 +1,56 @@
-
-div.col-3,div.col-9 {
-    padding-top: 20px;
-    text-align: center;
-    
+.main-content {
+  padding: 100px;
+  color: #f9f9f9;
 }
-div.col-3 {
-    margin-left: 30px;
-    max-width: 30%;   
+.main-content h1{
+  width: 100%;
+  text-align: center;
 }
-div.col-9 {
-    max-width: 70%;
+.main-row {
+  margin-top: 100px;
+  text-align: center;
 }
-.list-group{
-    box-shadow: 10px 10px 25px gray;
-    border-radius: 20px;
+.main .list-group a {
+  text-decoration: none;
+  color: #f9f9f9;
 }
-div.col {
-    margin:0;
+.box {
+  display: inline-block;
+  padding: 0 20px;
 }
-
-.card{
-    border-radius: 20px;
-    box-shadow: 10px 10px 20px gray;
-
+.box .image img {
+  border-radius: 2%;
 }
-.btn-light{
-    margin: 20px;
+.box .text {
+  /* background-color: azure; */
+  padding: 20px 0;
+  text-align: center;
 }
-/*flip*/
-/* The flip box container - set the width and height to whatever you want. 
-We have added the border property to demonstrate that the flip itself goes out of the box on hover 
-(remove perspective if you don't want the 3D effect */
-.flip-box {
-    margin: 10px;
-    width: 320px;
-    height: 342px;
-    perspective: 1000px; /* Remove this if you don't want the 3D effect */
+.list-group-item:nth-child(n+0) {
+  text-decoration: none;}
+  .list-group {
+    position: fixed;
+  }
+  .col-9 {
+    margin-left: 250px;
+  }
+  .list-group a {
+    background-color: #2a363b;
+    color: #f9f9f9;
+    transition: 0.5s;
+  }
+  .list-group a:hover {
+    background-color: #fecea8;
+    color: #2a363b;
+    transition: 0.5s;
   }
   
-  /* This container is needed to position the front and back side */
-  .flip-box-inner {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    transition: transform 0.8s;
-    transform-style: preserve-3d;
+  .list-group a.active {
+    background-color: #ff847c;
   }
-  
-  /* Do an horizontal flip when you move the mouse over the flip box container */
-  .flip-box:hover .flip-box-inner {
-    transform: rotateY(180deg);
+  @media(max-width) 
+  {
+    .col {
+      padding-bottom: 20px;
+    }
   }
-  
-  /* Position the front and back side */
-  .flip-box-front, .flip-box-back {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    backface-visibility: hidden;
-    border-radius: 20px;
-
-}
-  
-  /* Style the front side (fallback if image is missing) */
-  .flip-box-front {
-    background-color: #000;
-    color: black;
-  }
-  
-  /* Style the back side */
-  .flip-box-back {
-    background-color: black;
-    color: white;
-    padding: 100px;
-    font-size: 20px;
-    transform: rotateY(180deg);
-  }
-  div.about{
-    padding: 30px 30px;
-    text-align: center;
-    /* white-space: nowrap;  */
-    overflow: hidden;
-    text-overflow: ellipsis;  
-}
-.card-body h5{
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
-img.card-img-top{
-    border-radius: 20px;
-}

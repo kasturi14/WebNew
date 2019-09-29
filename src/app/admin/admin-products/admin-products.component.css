@@ -1,19 +1,15 @@
-.main-content {
-    position:absolute;
 
-    background: url('https://us.123rf.com/450wm/crazyass/crazyass1602/crazyass160200025/54248995-blur-abstract-bokeh-of-street-city-night-light-background-abstract-traffic-background-black-and-whit.jpg?ver=6');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
+.main-content {
+    color: #fecea8;
     width: 100%;
-    color: #fff;
+    padding: 0 15%;
+}
+.contain {
+    text-align: center;;
 }
 table{
-    margin: 50px;
-    margin-left: 180px;
     margin-top: 70px;
-    width: 70%;
-    font-family: 'Open Sans', sans-serif;
+
     text-align: center;
 }
 thead{
@@ -26,29 +22,34 @@ th {
 }
 tbody tr {
     font-weight: bold;
-
+    color: #fecea8;
+    transition: 0.5s;
 }
 
 tbody tr:hover {
-    background-color: #ddd;
-    color: black;
+    background-color: #fecea8;
+    color: #2a363b;
     border: none;
 }
 button.c{
     padding: 5px 10px;
     max-width: 200px;
     margin-right: 20px;
-    box-shadow: 5px 5px 20px #A6A5AC;
+    
 }
 
 span {
     padding-left: 550px;
     margin-bottom: 90px;
+    width: 100%;
+    text-align: center;
 }
 a.b{
-    position: relative;
+    cursor: pointer;
     width: 200px;
-    box-shadow: 5px 5px 20px #A6A5AC;
     margin-bottom: 90px;
-
+}
+.buttonadd {
+    width: 100%;
+    text-align: center;
 }

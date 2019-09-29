@@ -3,7 +3,6 @@
 @import "bootstrap/dist/css/bootstrap.css";
 
 body{
-    margin-top: 70px;
-    font-family: 'Space Mono', monospace;
-    background: #000; 
+    font-family: 'Lato', sans-serif;
+    background:#2a363b; 
 }

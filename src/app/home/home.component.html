@@ -1,7 +1,6 @@
 <link href="https://fonts.googleapis.com/css?family=Coiny" rel="stylesheet">
 <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 
-
 <section class="carousel-slides">
   <ngb-carousel *ngIf="images">
     <ng-template ngbSlide>
@@ -38,42 +37,63 @@
     </ng-template>
   </ngb-carousel>
 </section>
+
 <section class="about">
-  <h2>Live | Love | Sparkle </h2>
-  <div class="p">
-    <p id="text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-      Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-      when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-      It has survived not only five centuries, but also the leap into electronic typesetting,
-      remaining essentially unchanged. It was popularised in the 1960s with the release of
-      Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing
-      software like Aldus PageMaker including versions of Lorem Ipsum.</p><br />
-    <p id="text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-      Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-      when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-      It has survived not only five centuries, but also the leap into electronic typesetting,
-      remaining essentially unchanged. It was popularised in the 1960s with the release of
-      Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing
-      software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+  <h2>About Impulse</h2>
+  <div class="row">
+    <div class="about-image">
+      <img src="https://cdn.pixabay.com/photo/2017/08/07/21/56/people-2608316_960_720.jpg" alt="">
+    </div>
+    <div class="p">
+      <p id="text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+        when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+      <p id="text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+        when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+        It has survived not only five centuries, but also the leap into electronic typesetting,
+        remaining essentially unchanged.</p>
+    </div>
+  </div>
+</section>
+
+<section class="upcoming">
+  <div class="eventsup">
+    <h1>UPCOMING EVENTS</h1>
+    <div class="row">
+      <div class="c1">
+        <div class="img1 i1">
+          <img src="http://i.ytimg.com/vi/BdhErO4a9XE/maxresdefault.jpg" alt="">
+        </div>
+        <div class="cap">
+          <h4>PRAVEEN 2019</h4>
+          <h6>A Musical Festival</h6>
+          <p>OCTOBER 19</p>
+        </div>
+      </div>
+      <div class="c1">
+        <div class="img1 i2">
+          <img
+            src="https://lh3.googleusercontent.com/-99CqqVikVcM/U4j52d0qx9I/AAAAAAAAAKI/Wskv4TESjJo/s630-fcrop64=1,3c7f0000e3bfffff/whatta-show2.jpg"
+            alt="">
+        </div>
+        <div class="cap">
+          <h4>MOOD INDIGO</h4>
+          <h6>A Musical Festival</h6>
+          <p >OCTOBER 27</p>
+        </div>
+      </div>
+      <div class="mobt">
+          <button type="button" routerLink="/products" class="btn moreevents">MORE EVENTS</button>
+      </div>
+    </div>
   </div>
 </section>
 
 <section class="s-social">
-  <div class="social">
-    <h4>FIND US HERE</h4>
-    <div class="row">
-      <ul class="second">
-        <li><a routerLink="/"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-        <li><a routerLink="/"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
-        <li><a routerLink="/"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
-        <li><a routerLink="/"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-        <li><a routerLink="/"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-      </ul>
-    </div>
-  </div>
   <div class="eemail">
-    <h4>HIT US UP!</h4>
-    <h6>If you're interested in participating, do hit us up. We can't wait to hear from you!</h6>
+    <h4>HIT US UP!</h4><br>
+    <h6>If you're interested in participating, do hit us up. We can't wait to hear from you!</h6><br>
     <div class="input-group flex-nowrap">
       <input type="text" class="form-control" placeholder="Name" aria-label="Username"
         aria-describedby="addon-wrapping">
@@ -89,6 +109,18 @@
 
     <div class="send-button">
       <button type="button" class="btn btn-send">Send</button>
+    </div>
+  </div>
+  <div class="social">
+    <h4>FIND US HERE</h4>
+    <div class="row">
+      <ul class="second">
+        <li><a routerLink="/"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+        <li><a routerLink="/"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+        <li><a routerLink="/"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+        <li><a routerLink="/"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+        <li><a routerLink="/"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+      </ul>
     </div>
   </div>
   <h6>Copyright @Impulse 2019 <i class="fas fa-heart"></i></h6>

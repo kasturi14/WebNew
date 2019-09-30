@@ -23,6 +23,14 @@
   border-radius: 50%;
   height: 300px;
   width: 300px;
+  transition: 0.5s;
+}
+.box .image img:hover {
+  cursor: pointer;
+  transition: 0.5s;
+  box-shadow: 2px 2px 10px #fecea8;
+  height: 310px;
+  width: 310px;
 }
 .box .text {
   /* background-color: azure; */
@@ -32,3 +40,4 @@
 .box .text h5 a {
   margin-left: 10px;
 }
+

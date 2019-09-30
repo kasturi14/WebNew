@@ -26,7 +26,6 @@ import { RegisterComponent } from './register/register.component';
 import { RegistersaveService } from './registersave.service';
 import { AdminLoginComponent } from './admin-login/admin-login.component';
 import {EventService} from './event.service';
-import { AboutComponent } from './about/about.component';
 import { AdminRegisteredComponent } from './admin/admin-registered/admin-registered.component';
 import { NewFormComponent } from './new-form/new-form.component';
 
@@ -44,7 +43,6 @@ import { NewFormComponent } from './new-form/new-form.component';
     UserFormComponent,
     RegisterComponent,
     AdminLoginComponent,
-    AboutComponent,
     AdminRegisteredComponent,
     NewFormComponent
   
@@ -69,7 +67,6 @@ import { NewFormComponent } from './new-form/new-form.component';
       {path:'admin/login' , component:AdminLoginComponent},
       {path:'admin/registered_users' , component:AdminRegisteredComponent , canActivate:[AuthGuardService,AdminGuardService]},
       {path:'logout' , component:LogoutComponent},
-      {path:'about' , component:AboutComponent},
     ])
   ],
   providers: [AuthService, AuthGuardService , UserService, AdminGuardService, CategoriesService,UsersaveService,RegistersaveService,EventService],

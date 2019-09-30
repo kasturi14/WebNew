@@ -22,7 +22,9 @@
     font-size: 30px;
 }
 .about {
-    padding: 70px;
+    padding: 5%;
+    /* padding-bottom: 10%; */
+    width: 100%;
     background-color: black;
 }
 .about h2 {
@@ -30,7 +32,23 @@
     padding: 30px;
     color: #e84a5f;
 }
+.about .about-image{
+    width: 50%;
+    text-align: center;
+}
+.about .about-image img{
+    transition: 0.5s;
+    height: 350px;
+    width: 650px;
+}
+.about .about-image img:hover{
+    transition: 0.5s;
+    height: 360px;
+    width: 660px;
+}
 .about .p {
+    width: 50%;
+    float: left;
     text-align: justify;
     font-size: 20px;
     background: -webkit-linear-gradient(#e84a5f,#ff847c,#fecea8);
@@ -38,6 +56,60 @@
     -webkit-text-fill-color: transparent;
     padding: 30px;
 }
+.upcoming{
+    background-image: url(https://blogmedia.evbstatic.com/wp-content/uploads/wpmulti/sites/16/2016/04/01100642/photo-1429962714451-bb934ecdc4ec.jpeg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.8;
+    width: 100%;
+}
+.eventsup{
+    padding: 5%;
+    width: 100%;
+    text-align: center;
+    
+    color: #000;
+    font-weight: bolder;
+}
+.eventsup .row {
+    padding: 5%;
+    width: 100%;
+    text-align: center;
+}
+.eventsup .row .c1{
+    /* float: left; */
+    width: 100%;
+    padding-bottom: 30px;
+
+}
+.eventsup .row .c1 .img1 img {
+    height: 350px;
+    transition: 0.5s;
+}
+.eventsup .row .c1 .img1 img:hover {
+    transition: 0.5s;
+    height: 360px;
+    cursor: pointer;
+}
+.mobt {
+    width: 100%;
+    padding-top: 5%;
+    text-align: center;
+}
+.moreevents {
+    background-color: #2a363b;
+    color: #fecea8;
+    transition: 0.5s;
+    padding: 10px;
+}
+.moreevents:hover{
+    padding-bottom: 12px;
+    font-size: 22px;
+    transition: 0.5s;
+}
+
+
 .s-social {
     background-color: #fecea8;
     padding: 50px;
@@ -122,16 +194,47 @@
     background-color: #2a363b;
     color: #fecea8;
     padding: 10px 25px;
+    transition: 0.5s;
+}
+.send-button button:hover {
+    background-color: #ff847c;
+    color: #2a363b;
+    transition: 0.5s;
+    padding: 15px 30px;
 }
 
 
 
+@media(max-width: 1400px)
+{
+    .about .about-image{
+        width: 100%;
+    }
+    .about .p{
+        width: 100%;
 
-
+    }
+}
 @media (max-width: 1000px)
 {
     .eemail {
         padding: 70px 150px;
+    }
+}
+@media(max-width: 720px)
+{
+    .about .about-image img{
+        height: 250px;
+        width: 450px;
+    }
+    .eventsup .row .c1 .img1 img {
+        height: 300px;
+        transition: 0.5s;
+    }
+    .eventsup .row .c1 .img1 img:hover {
+        transition: 0.5s;
+        height: 310px;
+        cursor: pointer;
     }
 }
 @media(max-width: 700px)
@@ -164,6 +267,15 @@
     .carousel-caption p {
         font-size: 30px;
     }
+    .eventsup .row .c1 .img1 img {
+        height: 250px;
+        transition: 0.5s;
+    }
+    .eventsup .row .c1 .img1 img:hover {
+        transition: 0.5s;
+        height: 260px;
+        cursor: pointer;
+    }
 }
 @media (max-width: 500px)
 {
@@ -175,6 +287,10 @@
         text-align: center;
         padding: 20px;
     }
+    .about .about-image img{
+        height: 200px;
+        width: 350px;
+    }
     .eemail {
         padding: 30px;
     }
@@ -183,6 +299,15 @@
     }
     .carousel-caption p {
         font-size: 30px;
+    }
+    .eventsup .row .c1 .img1 img {
+        height: 200px;
+        transition: 0.5s;
+    }
+    .eventsup .row .c1 .img1 img:hover {
+        transition: 0.5s;
+        height: 210px;
+        cursor: pointer;
     }
 }
 @media(max-width: 430px)
@@ -196,4 +321,25 @@
     .eemail {
         padding: 0;
     }
+    .about .about-image img{
+        display: none;
+    }
+    .eventsup .row .c1 .img1 img {
+        height: 100px;
+        transition: 0.5s;
+    }
+    .eventsup .row .c1 .img1 img:hover {
+        transition: 0.5s;
+        height: 110px;
+        cursor: pointer;
+    }
 }
+
+
+
+
+
+
+
+
+

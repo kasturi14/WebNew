@@ -1,6 +1,6 @@
 # Impulse
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.1.3 and is hosted on firebase(https://ooshop-d777b.firebaseapp.com/) . This is a dummy event website with a proper database(firebase realtime database),has an admin side from where you can manage the events(add,update and delete them as required) and the registrations as well.Open the link to see all the cool features. To login as an admin, you will have to take the pains to search for it's username and password in the codebase as it is hardcoded for now.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.1.3 and is hosted on firebase(https://ooshop-d777b.firebaseapp.com/) . This is a dummy event website with a proper database(firebase realtime database),where we have used google authentication provided by firebase,has an admin side from where you can manage the events(add,update and delete them as required) and the registrations as well.Open the link to see all the cool features. To login as an admin, you will have to take the pains to search for it's username and password in the codebase as it is hardcoded for now.
 
 ##Running Impulse On your local macine
 
